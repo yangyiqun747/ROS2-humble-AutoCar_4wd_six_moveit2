@@ -1,0 +1,1095 @@
+ros@ubuntu:~/ROS_ws$ ros2 run wheeltec_tracker_pkg auto_switch_manager
+[INFO] [1771977477.195338174] [auto_switch_manager]: ========================================
+[INFO] [1771977477.197523045] [auto_switch_manager]: 自动切换管理器已启动
+[INFO] [1771977477.199479846] [auto_switch_manager]: ========================================
+[INFO] [1771977477.201432406] [auto_switch_manager]: 使用说明：
+[INFO] [1771977477.203372207] [auto_switch_manager]:   切换到导航: ros2 topic pub /switch_mode std_msgs/msg/String "data: 'nav'" --once
+[INFO] [1771977477.205329471] [auto_switch_manager]:   切换到机械臂: ros2 topic pub /switch_mode std_msgs/msg/String "data: 'arm'" --once
+[INFO] [1771977477.207276642] [auto_switch_manager]: ========================================
+[INFO] [1771977477.209284590] [auto_switch_manager]: 默认启动导航模式...
+[INFO] [1771977477.211205336] [auto_switch_manager]: ========================================
+[INFO] [1771977477.213133470] [auto_switch_manager]: 开始切换到导航模式（不携带物体）
+[INFO] [1771977477.215049124] [auto_switch_manager]: ========================================
+[INFO] [1771977477.217002980] [auto_switch_manager]: 当前没有运行的进程
+[INFO] [1771977477.218942633] [auto_switch_manager]: 启动RTAB-MAP导航...
+[INFO] [1771977477.220909285] [auto_switch_manager]: 命令: ros2 launch wheeltec_robot_rtab wheeltec_nav2_rtab.launch.py use_camera:=false
+[INFO] [1771977477.233654536] [auto_switch_manager]: 导航进程已启动，日志直接输出到终端
+[INFO] [1771977477.235720372] [auto_switch_manager]: 导航模式启动命令已发送
+[INFO] [1771977477.237760486] [auto_switch_manager]: 请查看上方日志输出
+[INFO] [1771977477.239760324] [auto_switch_manager]: ========================================
+[INFO] [launch]: All log files can be found below /home/ros/.ros/log/2026-02-25-07-57-58-650434-ubuntu-13919
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [robot_state_publisher-1]: process started with pid [13920]
+[INFO] [static_transform_publisher-2]: process started with pid [13922]
+[INFO] [wheeltec_robot_node-3]: process started with pid [13924]
+[INFO] [static_transform_publisher-4]: process started with pid [13926]
+[INFO] [static_transform_publisher-5]: process started with pid [13928]
+[INFO] [joint_state_publisher-6]: process started with pid [13930]
+[INFO] [imu_filter_madgwick_node-7]: process started with pid [13932]
+[INFO] [ekf_node-8]: process started with pid [13941]
+[INFO] [rplidar_node-9]: process started with pid [13946]
+[INFO] [static_transform_publisher-10]: process started with pid [13956]
+[static_transform_publisher-2] [WARN] [1771977479.888520722] []: Old-style arguments are deprecated; see --help for new-style arguments
+[static_transform_publisher-4] [WARN] [1771977479.989534652] []: Old-style arguments are deprecated; see --help for new-style arguments
+[static_transform_publisher-2] [INFO] [1771977480.159322678] [base_to_laser]: Spinning until stopped - publishing transform
+[static_transform_publisher-2] translation: ('0.107090', '0.000320', '0.011000')
+[static_transform_publisher-2] rotation: ('0.000000', '0.000000', '1.000000', '0.000796')
+[static_transform_publisher-2] from 'base_footprint' to 'laser'
+[static_transform_publisher-10] [WARN] [1771977480.204637739] []: Old-style arguments are deprecated; see --help for new-style arguments
+[static_transform_publisher-5] [WARN] [1771977480.396867706] []: Old-style arguments are deprecated; see --help for new-style arguments
+[robot_state_publisher-1] [WARN] [1771977480.512216768] [robot_state_publisher_mini_4wd]: No robot_description parameter, but command-line argument available.  Assuming argument is name of URDF file.  This backwards compatibility fallback will be removed in the future.
+[wheeltec_robot_node-3] [INFO] [1771977480.600388226] [wheeltec_robot]: wheeltec_robot Data ready
+[wheeltec_robot_node-3] [INFO] [1771977480.606182537] [wheeltec_robot]: wheeltec_robot serial port opened
+[imu_filter_madgwick_node-7] [INFO] [1771977480.677037969] [imu_filter_madgwick]: Starting ImuFilter
+[imu_filter_madgwick_node-7] [INFO] [1771977480.734760416] [imu_filter_madgwick]: Using dt computed from message headers
+[imu_filter_madgwick_node-7] [INFO] [1771977480.734906988] [imu_filter_madgwick]: The gravity vector is kept in the IMU message.
+[imu_filter_madgwick_node-7] [INFO] [1771977480.760177308] [imu_filter_madgwick]: Imu filter gain set to 0.100000
+[imu_filter_madgwick_node-7] [INFO] [1771977480.760332176] [imu_filter_madgwick]: Gyro drift bias set to 0.000000
+[imu_filter_madgwick_node-7] [INFO] [1771977480.760413063] [imu_filter_madgwick]: Magnetometer bias values: 0.000000 0.000000 0.000000
+[static_transform_publisher-10] [INFO] [1771977480.802129684] [odom_combined_to_odom]: Spinning until stopped - publishing transform
+[static_transform_publisher-10] translation: ('0.000000', '0.000000', '0.000000')
+[static_transform_publisher-10] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-10] from 'odom_combined' to 'odom'
+[static_transform_publisher-5] [INFO] [1771977480.936284914] [base_to_gyro]: Spinning until stopped - publishing transform
+[static_transform_publisher-5] translation: ('0.000000', '0.000000', '0.000000')
+[static_transform_publisher-5] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-4] [INFO] [1771977480.945133248] [base_to_link]: Spinning until stopped - publishing transform
+[static_transform_publisher-4] translation: ('0.000000', '0.000000', '0.068200')
+[static_transform_publisher-4] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-5] from 'base_footprint' to 'gyro_link'
+[static_transform_publisher-4] from 'base_footprint' to 'base_link'
+[imu_filter_madgwick_node-7] [INFO] [1771977481.218621104] [imu_filter_madgwick]: First IMU message received.
+[robot_state_publisher-1] [WARN] [1771977481.296216868] [kdl_parser]: The root link base_link has an inertia specified in the URDF, but KDL does not support a root link with an inertia.  As a workaround, you can add an extra dummy link to your URDF.
+[robot_state_publisher-1] [INFO] [1771977481.307602845] [robot_state_publisher_mini_4wd]: got segment armbase_link
+[robot_state_publisher-1] [INFO] [1771977481.310146414] [robot_state_publisher_mini_4wd]: got segment base_link
+[robot_state_publisher-1] [INFO] [1771977481.312389080] [robot_state_publisher_mini_4wd]: got segment c70_camera_link
+[robot_state_publisher-1] [INFO] [1771977481.314543341] [robot_state_publisher_mini_4wd]: got segment c70_camera_optical_frame
+[robot_state_publisher-1] [INFO] [1771977481.314625802] [robot_state_publisher_mini_4wd]: got segment camera_link
+[robot_state_publisher-1] [INFO] [1771977481.314662117] [robot_state_publisher_mini_4wd]: got segment camera_optical_frame
+[robot_state_publisher-1] [INFO] [1771977481.314692061] [robot_state_publisher_mini_4wd]: got segment controller_link
+[robot_state_publisher-1] [INFO] [1771977481.314721579] [robot_state_publisher_mini_4wd]: got segment endlink6
+[robot_state_publisher-1] [INFO] [1771977481.314748726] [robot_state_publisher_mini_4wd]: got segment endlink7
+[robot_state_publisher-1] [INFO] [1771977481.314775670] [robot_state_publisher_mini_4wd]: got segment front_box_link
+[robot_state_publisher-1] [INFO] [1771977481.314802059] [robot_state_publisher_mini_4wd]: got segment horizontal_rod_link
+[robot_state_publisher-1] [INFO] [1771977481.314828910] [robot_state_publisher_mini_4wd]: got segment laser_link
+[robot_state_publisher-1] [INFO] [1771977481.314854354] [robot_state_publisher_mini_4wd]: got segment lb_wheel_link
+[robot_state_publisher-1] [INFO] [1771977481.314880594] [robot_state_publisher_mini_4wd]: got segment lf_wheel_link
+[robot_state_publisher-1] [INFO] [1771977481.314907075] [robot_state_publisher_mini_4wd]: got segment link1
+[robot_state_publisher-1] [INFO] [1771977481.314934205] [robot_state_publisher_mini_4wd]: got segment link2
+[robot_state_publisher-1] [INFO] [1771977481.320285671] [robot_state_publisher_mini_4wd]: got segment link3
+[robot_state_publisher-1] [INFO] [1771977481.320324856] [robot_state_publisher_mini_4wd]: got segment link4
+[robot_state_publisher-1] [INFO] [1771977481.320353540] [robot_state_publisher_mini_4wd]: got segment link5
+[robot_state_publisher-1] [INFO] [1771977481.320379910] [robot_state_publisher_mini_4wd]: got segment rb_wheel_link
+[robot_state_publisher-1] [INFO] [1771977481.320406632] [robot_state_publisher_mini_4wd]: got segment rf_wheel_link
+[robot_state_publisher-1] [INFO] [1771977481.320432428] [robot_state_publisher_mini_4wd]: got segment rod_link
+[robot_state_publisher-1] [INFO] [1771977481.320459168] [robot_state_publisher_mini_4wd]: got segment short_vertical_rod_link
+[rplidar_node-9] [INFO] [1771977481.385005779] [rplidar_node]: Angle crop function is enabled. Crop angle range: [90.0, 270.0] degrees
+[rplidar_node-9] [INFO] [1771977481.385495623] [rplidar_node]: RPLidar running on ROS2 package rplidar_ros. RPLIDAR SDK Version:2.1.0
+[rplidar_node-9] [INFO] [1771977481.919499495] [rplidar_node]: RPLidar S/N: 4086E0F8C6E59AC0B5E29FF9C3534E00
+[rplidar_node-9] [INFO] [1771977481.919622937] [rplidar_node]: Firmware Ver: 1.02
+[rplidar_node-9] [INFO] [1771977481.919661788] [rplidar_node]: Hardware Rev: 18
+[rplidar_node-9] [INFO] [1771977481.922422687] [rplidar_node]: RPLidar health status : 0
+[rplidar_node-9] [INFO] [1771977481.922651776] [rplidar_node]: RPLidar health status : OK.
+[rplidar_node-9] [INFO] [1771977481.928189443] [rplidar_node]: Start
+[rplidar_node-9] [INFO] [1771977482.209290468] [rplidar_node]: current scan mode: Standard, sample rate: 5 Khz, max_distance: 16.0 m, scan frequency:10.0 Hz, 
+[joint_state_publisher-6] [INFO] [1771977482.661653754] [joint_state_publisher]: Waiting for robot_description to be published on the robot_description topic...
+[INFO] [1771977484.731392252] [auto_switch_manager]: 收到切换命令: place
+[INFO] [1771977484.733556013] [auto_switch_manager]: ========================================
+[INFO] [1771977484.735543998] [auto_switch_manager]: 开始切换到机械臂放置模式
+[INFO] [1771977484.737560705] [auto_switch_manager]: ========================================
+[INFO] [1771977484.739570857] [auto_switch_manager]: 正在停止当前模式: navigation
+[INFO] [1771977484.741616878] [auto_switch_manager]: 发送SIGINT信号给进程组...
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[static_transform_publisher-10] [INFO] [1771977484.742181573] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[static_transform_publisher-2] [INFO] [1771977484.742395125] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[static_transform_publisher-5] [INFO] [1771977484.744993600] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[imu_filter_madgwick_node-7] [INFO] [1771977484.746872532] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[wheeltec_robot_node-3] [INFO] [1771977484.746923253] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[wheeltec_robot_node-3] [ERROR] [1771977484.762751582] [wheeltec_robot]: unexpectedly failed whith failed to create guard condition: the given context is not valid, either rcl_init() was not called or rcl_shutdown() was called., at ./src/rcl/guard_condition.c:67
+[wheeltec_robot_node-3] [INFO] [1771977484.775403909] [wheeltec_robot]: Shutting down
+[ekf_node-8] [INFO] [1771977484.747032251] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[static_transform_publisher-4] [INFO] [1771977484.747745480] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[robot_state_publisher-1] [INFO] [1771977484.749830001] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[rplidar_node-9] [INFO] [1771977484.886744889] [rplidar_node]: Stop motor
+[INFO] [static_transform_publisher-5]: process has finished cleanly [pid 13928]
+[INFO] [robot_state_publisher-1]: process has finished cleanly [pid 13920]
+[INFO] [static_transform_publisher-10]: process has finished cleanly [pid 13956]
+[INFO] [static_transform_publisher-2]: process has finished cleanly [pid 13922]
+[INFO] [static_transform_publisher-4]: process has finished cleanly [pid 13926]
+[INFO] [imu_filter_madgwick_node-7]: process has finished cleanly [pid 13932]
+[INFO] [wheeltec_robot_node-3]: process has finished cleanly [pid 13924]
+[INFO] [ekf_node-8]: process has finished cleanly [pid 13941]
+[INFO] [joint_state_publisher-6]: process has finished cleanly [pid 13930]
+[INFO] [rplidar_node-9]: process has finished cleanly [pid 13946]
+[INFO] [1771977486.125742417] [auto_switch_manager]: 进程已正常退出
+[INFO] [1771977486.127845585] [auto_switch_manager]: 等待5秒释放资源（串口、内存等）...
+[INFO] [1771977491.138854077] [auto_switch_manager]: 资源释放完成
+[INFO] [1771977491.144646647] [auto_switch_manager]: 启动机械臂（放置模式）...
+[INFO] [1771977491.180532902] [auto_switch_manager]: 机械臂模式已启动，等待3秒后发送place命令...
+[INFO] [launch]: All log files can be found below /home/ros/.ros/log/2026-02-25-07-58-12-639832-ubuntu-14050
+[INFO] [launch]: Default logging verbosity is set to INFO
+Using load_yaml() directly is deprecated. Use xacro.load_yaml() instead.
+Using load_yaml() directly is deprecated. Use xacro.load_yaml() instead.
+Using load_yaml() directly is deprecated. Use xacro.load_yaml() instead.
+Using load_yaml() directly is deprecated. Use xacro.load_yaml() instead.
+[INFO] [1771977494.187476098] [auto_switch_manager]: 已发送 place 命令
+[INFO] [1771977494.189655654] [auto_switch_manager]: ========================================
+Using load_yaml() directly is deprecated. Use xacro.load_yaml() instead.
+Using load_yaml() directly is deprecated. Use xacro.load_yaml() instead.
+Using load_yaml() directly is deprecated. Use xacro.load_yaml() instead.
+Using load_yaml() directly is deprecated. Use xacro.load_yaml() instead.
+Using load_yaml() directly is deprecated. Use xacro.load_yaml() instead.
+Using load_yaml() directly is deprecated. Use xacro.load_yaml() instead.
+Using load_yaml() directly is deprecated. Use xacro.load_yaml() instead.
+Using load_yaml() directly is deprecated. Use xacro.load_yaml() instead.
+Using load_yaml() directly is deprecated. Use xacro.load_yaml() instead.
+Using load_yaml() directly is deprecated. Use xacro.load_yaml() instead.
+Using load_yaml() directly is deprecated. Use xacro.load_yaml() instead.
+Using load_yaml() directly is deprecated. Use xacro.load_yaml() instead.
+Using load_yaml() directly is deprecated. Use xacro.load_yaml() instead.
+Using load_yaml() directly is deprecated. Use xacro.load_yaml() instead.
+Using load_yaml() directly is deprecated. Use xacro.load_yaml() instead.
+Using load_yaml() directly is deprecated. Use xacro.load_yaml() instead.
+Using load_yaml() directly is deprecated. Use xacro.load_yaml() instead.
+Using load_yaml() directly is deprecated. Use xacro.load_yaml() instead.
+Using load_yaml() directly is deprecated. Use xacro.load_yaml() instead.
+Using load_yaml() directly is deprecated. Use xacro.load_yaml() instead.
+Using load_yaml() directly is deprecated. Use xacro.load_yaml() instead.
+Using load_yaml() directly is deprecated. Use xacro.load_yaml() instead.
+[INFO] [wheeltec_six_arm-1]: process started with pid [14051]
+[INFO] [static_transform_publisher-2]: process started with pid [14053]
+[INFO] [robot_state_publisher-3]: process started with pid [14055]
+[INFO] [move_group-4]: process started with pid [14057]
+[INFO] [rviz2-5]: process started with pid [14059]
+[INFO] [ros2_control_node-6]: process started with pid [14061]
+[INFO] [spawner-7]: process started with pid [14063]
+[INFO] [spawner-8]: process started with pid [14065]
+[INFO] [spawner-9]: process started with pid [14068]
+[INFO] [six_arm_visualTracker.py-10]: process started with pid [14070]
+[INFO] [six_arm_car_location_color-11]: process started with pid [14082]
+[INFO] [six_arm_pick_and_put-12]: process started with pid [14092]
+[INFO] [usb_cam_node_exe-13]: process started with pid [14100]
+[wheeltec_six_arm-1] [INFO] [1771977501.372339503] [wheeltec_arm_six]: wheeltec_arm_six node has turned on (ROS 2 Humble)
+[static_transform_publisher-2] [INFO] [1771977501.874381721] [static_transform_publisher0]: Spinning until stopped - publishing transform
+[static_transform_publisher-2] translation: ('0.000000', '0.000000', '0.000000')
+[static_transform_publisher-2] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-2] from 'base_link' to 'armbase_link'
+[wheeltec_six_arm-1] [WARN] [1771977502.213756481] [wheeltec_six_arm]: ========== 订阅 /joint_states 话题（备选控制源） ==========
+[wheeltec_six_arm-1] [WARN] [1771977502.227653083] [wheeltec_six_arm]: ========== /joint_states 订阅完成 ==========
+[wheeltec_six_arm-1] [WARN] [1771977502.291128267] [wheeltec_six_arm]: ========== 订阅 arm_controller/state 话题 ==========
+[wheeltec_six_arm-1] [WARN] [1771977502.395694434] [wheeltec_six_arm]: ========== arm_controller/state 订阅完成 ==========
+[wheeltec_six_arm-1] [WARN] [1771977502.398304095] [wheeltec_six_arm]: ========== 订阅 hand_controller/state 话题 ==========
+[wheeltec_six_arm-1] [WARN] [1771977502.411398914] [wheeltec_six_arm]: ========== hand_controller/state 订阅完成 ==========
+[wheeltec_six_arm-1] [INFO] [1771977502.427848362] [wheeltec_six_arm]: Data ready, starting serial communication setup.
+[six_arm_car_location_color-11] [INFO] [1771977502.429831255] [car_location_color]: car_location_color_node_init_successful
+[wheeltec_six_arm-1] [INFO] [1771977502.433997352] [wheeltec_six_arm]: wheeltec_robot serial port opened successfully.
+[wheeltec_six_arm-1] [INFO] [1771977502.437614848] [wheeltec_six_arm]: Arm serial ready. Waiting for MoveIt commands.
+[robot_state_publisher-3] [WARN] [1771977502.898431141] [kdl_parser]: The root link base_link has an inertia specified in the URDF, but KDL does not support a root link with an inertia.  As a workaround, you can add an extra dummy link to your URDF.
+[robot_state_publisher-3] [INFO] [1771977502.902687052] [robot_state_publisher]: got segment armbase_link
+[robot_state_publisher-3] [INFO] [1771977502.906939629] [robot_state_publisher]: got segment base_link
+[robot_state_publisher-3] [INFO] [1771977502.910684826] [robot_state_publisher]: got segment c70_camera_link
+[robot_state_publisher-3] [INFO] [1771977502.916337769] [robot_state_publisher]: got segment c70_camera_optical_frame
+[robot_state_publisher-3] [INFO] [1771977502.916418472] [robot_state_publisher]: got segment camera_link
+[robot_state_publisher-3] [INFO] [1771977502.916451415] [robot_state_publisher]: got segment camera_optical_frame
+[robot_state_publisher-3] [INFO] [1771977502.916481304] [robot_state_publisher]: got segment controller_link
+[robot_state_publisher-3] [INFO] [1771977502.916509266] [robot_state_publisher]: got segment endlink6
+[robot_state_publisher-3] [INFO] [1771977502.916537599] [robot_state_publisher]: got segment endlink7
+[robot_state_publisher-3] [INFO] [1771977502.916564173] [robot_state_publisher]: got segment front_box_link
+[robot_state_publisher-3] [INFO] [1771977502.916589784] [robot_state_publisher]: got segment horizontal_rod_link
+[robot_state_publisher-3] [INFO] [1771977502.916615542] [robot_state_publisher]: got segment laser_link
+[robot_state_publisher-3] [INFO] [1771977502.916642116] [robot_state_publisher]: got segment lb_wheel_link
+[robot_state_publisher-3] [INFO] [1771977502.916668986] [robot_state_publisher]: got segment lf_wheel_link
+[robot_state_publisher-3] [INFO] [1771977502.916697597] [robot_state_publisher]: got segment link1
+[robot_state_publisher-3] [INFO] [1771977502.916726078] [robot_state_publisher]: got segment link2
+[robot_state_publisher-3] [INFO] [1771977502.916753762] [robot_state_publisher]: got segment link3
+[robot_state_publisher-3] [INFO] [1771977502.916782373] [robot_state_publisher]: got segment link4
+[robot_state_publisher-3] [INFO] [1771977502.916808521] [robot_state_publisher]: got segment link5
+[robot_state_publisher-3] [INFO] [1771977502.916834909] [robot_state_publisher]: got segment rb_wheel_link
+[robot_state_publisher-3] [INFO] [1771977502.916862075] [robot_state_publisher]: got segment rf_wheel_link
+[robot_state_publisher-3] [INFO] [1771977502.916888242] [robot_state_publisher]: got segment rod_link
+[robot_state_publisher-3] [INFO] [1771977502.916914482] [robot_state_publisher]: got segment short_vertical_rod_link
+[six_arm_pick_and_put-12] [INFO] [1771977504.076355371] [arm_pick_and_put]: 初始化Arm Pick and Place Node...
+[move_group-4] [INFO] [1771977504.303577645] [moveit_rdf_loader.rdf_loader]: Loaded robot model in 0.851783 seconds
+[move_group-4] [INFO] [1771977504.303873843] [moveit_robot_model.robot_model]: Loading robot model 'mini_4wd_robot'...
+[move_group-4] [WARN] [1771977504.303919250] [moveit_robot_model.robot_model]: Skipping virtual joint 'virtual_joint' because its child frame 'armbase_link' does not match the URDF frame 'base_link'
+[move_group-4] [INFO] [1771977504.303942305] [moveit_robot_model.robot_model]: No root/virtual joint specified in SRDF. Assuming fixed joint
+[six_arm_pick_and_put-12] [INFO] [1771977504.481802215] [arm_pick_and_put]: Arm Pick and Place Node Initialized, MoveIt interface will be initialized asynchronously.
+[six_arm_pick_and_put-12] [INFO] [1771977504.492547037] [arm_pick_and_put]: [Status] arm_state: none, arm_done: 0, pick_in_progress: 0, moveit_ready: 0, visual_clamp_triggered: 0
+[six_arm_pick_and_put-12] [INFO] [1771977505.482206399] [arm_pick_and_put]: 尝试初始化MoveIt接口...
+[six_arm_pick_and_put-12] [WARN] [1771977505.484269494] [rcl.logging_rosout]: Publisher already registered for provided node name. If this is due to multiple nodes with the same name then all logs for that logger name will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.
+[ros2_control_node-6] [WARN] [1771977505.627877271] [controller_manager]: [Deprecated] Passing the robot description parameter directly to the control_manager node is deprecated. Use '~/robot_description' topic from 'robot_state_publisher' instead.
+[ros2_control_node-6] [INFO] [1771977505.637903938] [resource_manager]: Loading hardware 'FakeSystem' 
+[ros2_control_node-6] [INFO] [1771977505.693352015] [resource_manager]: Initialize hardware 'FakeSystem' 
+[ros2_control_node-6] [INFO] [1771977505.693634103] [resource_manager]: Successful initialization of hardware 'FakeSystem'
+[ros2_control_node-6] [INFO] [1771977505.693881691] [resource_manager]: 'configure' hardware 'FakeSystem' 
+[ros2_control_node-6] [INFO] [1771977505.693946486] [resource_manager]: Successful 'configure' of hardware 'FakeSystem'
+[ros2_control_node-6] [INFO] [1771977505.693978078] [resource_manager]: 'activate' hardware 'FakeSystem' 
+[ros2_control_node-6] [INFO] [1771977505.694003115] [resource_manager]: Successful 'activate' of hardware 'FakeSystem'
+[ros2_control_node-6] [INFO] [1771977506.427246504] [controller_manager]: update rate is 100 Hz
+[ros2_control_node-6] [INFO] [1771977506.432320198] [controller_manager]: Spawning controller_manager RT thread with scheduler priority: 50
+[usb_cam_node_exe-13] [INFO] [1771977506.435549125] [usb_cam_node]: camera_name value: default_cam
+[usb_cam_node_exe-13] [WARN] [1771977506.447163673] [usb_cam_node]: framerate: 30.000000
+[ros2_control_node-6] [WARN] [1771977506.450823575] [controller_manager]: No real-time kernel detected on this system. See [https://control.ros.org/master/doc/ros2_control/controller_manager/doc/userdoc.html] for details on how to enable realtime scheduling.
+[ros2_control_node-6] [INFO] [1771977506.495518146] [controller_manager]: Loading controller 'joint_state_broadcaster'
+[usb_cam_node_exe-13] [INFO] [1771977506.681687918] [usb_cam_node]: using default calibration URL
+[usb_cam_node_exe-13] [INFO] [1771977506.681870730] [usb_cam_node]: camera calibration URL: file:///home/ros/.ros/camera_info/default_cam.yaml
+[usb_cam_node_exe-13] [WARN] [1771977506.682938786] [camera_calibration_parsers]: Exception parsing YAML camera calibration:
+[usb_cam_node_exe-13] bad conversion
+[usb_cam_node_exe-13] [ERROR] [1771977506.683036173] [camera_calibration_parsers]: Failed to parse camera calibration from file [/home/ros/.ros/camera_info/default_cam.yaml]
+[usb_cam_node_exe-13] [WARN] [1771977506.683109376] [usb_cam_node]: Camera calibration file /home/ros/.ros/camera_info/default_cam.yaml not found
+[usb_cam_node_exe-13] [INFO] [1771977506.683514869] [usb_cam_node]: Starting 'default_cam' (/dev/video0) at 640x480 via mmap (yuyv) at 30 FPS
+[usb_cam_node_exe-13] [INFO] [1771977506.793571759] [usb_cam_node]: This devices supproted formats:
+[usb_cam_node_exe-13] [INFO] [1771977506.796870205] [usb_cam_node]: 	Motion-JPEG: 1280 x 720 (30 Hz)
+[usb_cam_node_exe-13] [INFO] [1771977506.799445884] [usb_cam_node]: 	Motion-JPEG: 1280 x 720 (30 Hz)
+[usb_cam_node_exe-13] [INFO] [1771977506.801715642] [usb_cam_node]: 	Motion-JPEG: 160 x 120 (30 Hz)
+[usb_cam_node_exe-13] [INFO] [1771977506.801790012] [usb_cam_node]: 	Motion-JPEG: 176 x 144 (30 Hz)
+[usb_cam_node_exe-13] [INFO] [1771977506.801824492] [usb_cam_node]: 	Motion-JPEG: 320 x 240 (30 Hz)
+[usb_cam_node_exe-13] [INFO] [1771977506.801856603] [usb_cam_node]: 	Motion-JPEG: 352 x 288 (30 Hz)
+[usb_cam_node_exe-13] [INFO] [1771977506.801885621] [usb_cam_node]: 	Motion-JPEG: 848 x 480 (30 Hz)
+[usb_cam_node_exe-13] [INFO] [1771977506.801913398] [usb_cam_node]: 	Motion-JPEG: 800 x 600 (30 Hz)
+[usb_cam_node_exe-13] [INFO] [1771977506.801940361] [usb_cam_node]: 	Motion-JPEG: 960 x 540 (30 Hz)
+[usb_cam_node_exe-13] [INFO] [1771977506.801967620] [usb_cam_node]: 	Motion-JPEG: 640 x 480 (30 Hz)
+[usb_cam_node_exe-13] [INFO] [1771977506.801994397] [usb_cam_node]: 	Motion-JPEG: 1280 x 720 (30 Hz)
+[usb_cam_node_exe-13] [INFO] [1771977506.802021952] [usb_cam_node]: 	Motion-JPEG: 1280 x 720 (30 Hz)
+[usb_cam_node_exe-13] [INFO] [1771977506.802049341] [usb_cam_node]: 	YUYV 4:2:2: 1280 x 720 (10 Hz)
+[usb_cam_node_exe-13] [INFO] [1771977506.802078303] [usb_cam_node]: 	YUYV 4:2:2: 1280 x 720 (10 Hz)
+[usb_cam_node_exe-13] [INFO] [1771977506.802105099] [usb_cam_node]: 	YUYV 4:2:2: 160 x 120 (30 Hz)
+[usb_cam_node_exe-13] [INFO] [1771977506.802132358] [usb_cam_node]: 	YUYV 4:2:2: 176 x 144 (30 Hz)
+[usb_cam_node_exe-13] [INFO] [1771977506.802159042] [usb_cam_node]: 	YUYV 4:2:2: 320 x 240 (30 Hz)
+[usb_cam_node_exe-13] [INFO] [1771977506.802187005] [usb_cam_node]: 	YUYV 4:2:2: 352 x 288 (30 Hz)
+[usb_cam_node_exe-13] [INFO] [1771977506.802213597] [usb_cam_node]: 	YUYV 4:2:2: 848 x 480 (25 Hz)
+[usb_cam_node_exe-13] [INFO] [1771977506.802240874] [usb_cam_node]: 	YUYV 4:2:2: 800 x 600 (20 Hz)
+[usb_cam_node_exe-13] [INFO] [1771977506.802268578] [usb_cam_node]: 	YUYV 4:2:2: 960 x 540 (20 Hz)
+[usb_cam_node_exe-13] [INFO] [1771977506.802297966] [usb_cam_node]: 	YUYV 4:2:2: 640 x 480 (30 Hz)
+[usb_cam_node_exe-13] [INFO] [1771977506.802324706] [usb_cam_node]: 	YUYV 4:2:2: 1280 x 720 (10 Hz)
+[usb_cam_node_exe-13] [INFO] [1771977506.802351539] [usb_cam_node]: 	YUYV 4:2:2: 1280 x 720 (10 Hz)
+[usb_cam_node_exe-13] [INFO] [1771977506.802411983] [usb_cam_node]: Setting 'brightness' to 50
+[ros2_control_node-6] [INFO] [1771977507.060926884] [controller_manager]: Loading controller 'arm_controller'
+[usb_cam_node_exe-13] unknown control 'white_balance_temperature_auto'
+[usb_cam_node_exe-13] 
+[usb_cam_node_exe-13] [INFO] [1771977507.100470411] [usb_cam_node]: Setting 'white_balance_temperature_auto' to 1
+[usb_cam_node_exe-13] [INFO] [1771977507.100645223] [usb_cam_node]: Setting 'exposure_auto' to 3
+[spawner-9] [INFO] [1771977507.168288745] [spawner_joint_state_broadcaster]: Loaded joint_state_broadcaster
+[usb_cam_node_exe-13] unknown control 'exposure_auto'
+[usb_cam_node_exe-13] 
+[usb_cam_node_exe-13] [INFO] [1771977507.259512134] [usb_cam_node]: Setting 'focus_auto' to 0
+[six_arm_pick_and_put-12] [INFO] [1771977507.308787166] [moveit_rdf_loader.rdf_loader]: Loaded robot model in 1.82565 seconds
+[six_arm_pick_and_put-12] [INFO] [1771977507.309014700] [moveit_robot_model.robot_model]: Loading robot model 'mini_4wd_robot'...
+[six_arm_pick_and_put-12] [WARN] [1771977507.309058847] [moveit_robot_model.robot_model]: Skipping virtual joint 'virtual_joint' because its child frame 'armbase_link' does not match the URDF frame 'base_link'
+[six_arm_pick_and_put-12] [INFO] [1771977507.309082198] [moveit_robot_model.robot_model]: No root/virtual joint specified in SRDF. Assuming fixed joint
+[usb_cam_node_exe-13] unknown control 'focus_auto'
+[usb_cam_node_exe-13] 
+[usb_cam_node_exe-13] [INFO] [1771977507.636441213] [usb_cam_node]: Timer triggering every 33 ms
+[ros2_control_node-6] [WARN] [1771977507.668160519] [arm_controller]: [Deprecated]: "allow_nonzero_velocity_at_trajectory_end" is set to true. The default behavior will change to false.
+[ros2_control_node-6] [INFO] [1771977507.684732095] [controller_manager]: Configuring controller 'joint_state_broadcaster'
+[ros2_control_node-6] [INFO] [1771977507.685117385] [joint_state_broadcaster]: 'joints' or 'interfaces' parameter is empty. All available state interfaces will be published
+[spawner-9] [INFO] [1771977507.934158110] [spawner_joint_state_broadcaster]: Configured and activated joint_state_broadcaster
+[wheeltec_six_arm-1] [WARN] [1771977507.958894606] [wheeltec_six_arm]: ========== joint_states_control 回调首次被调用 ==========
+[spawner-7] [INFO] [1771977508.562116104] [spawner_arm_controller]: Loaded arm_controller
+[ros2_control_node-6] [INFO] [1771977508.699364393] [controller_manager]: Configuring controller 'arm_controller'
+[ros2_control_node-6] [INFO] [1771977508.700005253] [arm_controller]: No specific joint names are used for command interfaces. Using 'joints' parameter.
+[ros2_control_node-6] [INFO] [1771977508.700242712] [arm_controller]: Command interfaces are [position] and state interfaces are [position velocity].
+[ros2_control_node-6] [INFO] [1771977508.700375432] [arm_controller]: Using 'splines' interpolation method.
+[ros2_control_node-6] [INFO] [1771977508.717950214] [arm_controller]: Controller state will be published at 50.00 Hz.
+[ros2_control_node-6] [INFO] [1771977508.841695284] [arm_controller]: Action status changes will be monitored at 20.00 Hz.
+[spawner-7] [INFO] [1771977509.139308627] [spawner_arm_controller]: Configured and activated arm_controller
+[ros2_control_node-6] [WARN] [1771977509.141344945] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977509.208687009] [wheeltec_six_arm]: ========== arm_controller_state 回调首次被调用 ==========
+[spawner-8] [INFO] [1771977509.262491947] [spawner_hand_controller]: waiting for service /controller_manager/list_controllers to become available...
+[INFO] [spawner-9]: process has finished cleanly [pid 14068]
+[wheeltec_six_arm-1] [WARN] [1771977509.959387905] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[ros2_control_node-6] [WARN] [1771977510.152147122] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[ros2_control_node-6] [INFO] [1771977510.217016358] [controller_manager]: Loading controller 'hand_controller'
+[wheeltec_six_arm-1] [WARN] [1771977510.459633857] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[ros2_control_node-6] [WARN] [1771977510.938845863] [hand_controller]: [Deprecated]: "allow_nonzero_velocity_at_trajectory_end" is set to true. The default behavior will change to false.
+[spawner-8] [INFO] [1771977510.949983900] [spawner_hand_controller]: Loaded hand_controller
+[ros2_control_node-6] [INFO] [1771977510.986486403] [controller_manager]: Configuring controller 'hand_controller'
+[ros2_control_node-6] [INFO] [1771977510.987354926] [hand_controller]: No specific joint names are used for command interfaces. Using 'joints' parameter.
+[ros2_control_node-6] [INFO] [1771977510.987691624] [hand_controller]: Command interfaces are [position] and state interfaces are [position velocity].
+[ros2_control_node-6] [INFO] [1771977510.987870010] [hand_controller]: Using 'splines' interpolation method.
+[wheeltec_six_arm-1] [WARN] [1771977511.009204784] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[ros2_control_node-6] [INFO] [1771977511.018848754] [hand_controller]: Controller state will be published at 50.00 Hz.
+[INFO] [spawner-7]: process has finished cleanly [pid 14063]
+[ros2_control_node-6] [INFO] [1771977511.141143477] [hand_controller]: Action status changes will be monitored at 20.00 Hz.
+[ros2_control_node-6] [WARN] [1771977511.171528694] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977511.210974556] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[spawner-8] [INFO] [1771977511.369121331] [spawner_hand_controller]: Configured and activated hand_controller
+[wheeltec_six_arm-1] [WARN] [1771977511.459892784] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977511.465458802] [wheeltec_six_arm]: ========== hand_controller_state 回调首次被调用 ==========
+[wheeltec_six_arm-1] [WARN] [1771977511.509379534] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977511.660967067] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977511.909093122] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977512.059947575] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977512.110307126] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[ros2_control_node-6] [WARN] [1771977512.182783753] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977512.310345926] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[INFO] [spawner-8]: process has finished cleanly [pid 14065]
+[wheeltec_six_arm-1] [WARN] [1771977512.562956111] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977512.609137027] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977512.810125256] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[move_group-4] [WARN] [1771977512.890605047] [kdl_parser]: The root link base_link has an inertia specified in the URDF, but KDL does not support a root link with an inertia.  As a workaround, you can add an extra dummy link to your URDF.
+[wheeltec_six_arm-1] [WARN] [1771977513.010145946] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977513.158578161] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[ros2_control_node-6] [WARN] [1771977513.201285672] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977513.210840865] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[six_arm_visualTracker.py-10] [WARN] [1771977513.366713512] [six_arm_visualTracker]: 视觉跟踪器配置:
+[six_arm_visualTracker.py-10] [WARN] [1771977513.375805434] [six_arm_visualTracker]:   循环模式: False
+[six_arm_visualTracker.py-10] [WARN] [1771977513.406323926] [six_arm_visualTracker]:   绿色: lower=[35 43 46], upper=[ 77 255 255]
+[six_arm_visualTracker.py-10] [WARN] [1771977513.425151095] [six_arm_visualTracker]:   蓝色: lower=[100  43  46], upper=[124 255 255]
+[six_arm_visualTracker.py-10] [WARN] [1771977513.445104096] [six_arm_visualTracker]:   黄色: lower=[26 43 46], upper=[ 34 255 255]
+[wheeltec_six_arm-1] [WARN] [1771977513.459749908] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[six_arm_visualTracker.py-10] [WARN] [1771977513.479249268] [six_arm_visualTracker]:   红色: lower1=[ 0 80 80], upper1=[ 15 255 255]
+[wheeltec_six_arm-1] [WARN] [1771977513.509627596] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[six_arm_visualTracker.py-10] [WARN] [1771977513.516927993] [six_arm_visualTracker]:   棕色: lower=[ 5 50 10], upper=[ 25 255 150]
+[six_arm_visualTracker.py-10] [WARN] [1771977513.528637372] [six_arm_visualTracker]: 订阅图像话题: /image_raw
+[wheeltec_six_arm-1] [WARN] [1771977513.658684634] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977513.709208404] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977513.709906800] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[six_arm_pick_and_put-12] [WARN] [1771977513.852072508] [moveit_ros.robot_model_loader]: No kinematics plugins defined. Fill and load kinematics.yaml!
+[wheeltec_six_arm-1] [WARN] [1771977513.909252816] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977513.910329372] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[six_arm_visualTracker.py-10] [WARN] [1771977513.994172365] [six_arm_visualTracker]: targetUpper: [ 0 43 46]
+[six_arm_visualTracker.py-10] [WARN] [1771977514.005021351] [six_arm_visualTracker]: 视觉跟踪节点初始化完成，等待图像数据...
+[six_arm_visualTracker.py-10] [WARN] [1771977514.025056148] [six_arm_visualTracker]: visualTracker init done
+[six_arm_visualTracker.py-10] [WARN] [1771977514.039143969] [six_arm_visualTracker]: Starting main loop...
+[six_arm_visualTracker.py-10] [WARN] [1771977514.047550958] [six_arm_visualTracker]: Starting rclpy spin...
+[wheeltec_six_arm-1] [WARN] [1771977514.110464745] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977514.111455506] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977514.158694164] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[ros2_control_node-6] [WARN] [1771977514.211878686] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977514.359892112] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977514.360514935] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977514.560529884] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977514.561948564] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977514.660425314] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977514.809227263] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977514.815011334] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977515.058926922] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977515.059341953] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977515.208651375] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[ros2_control_node-6] [WARN] [1771977515.241293332] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977515.258949982] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977515.259436159] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977515.509197503] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977515.509593755] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977515.758497372] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977515.758874773] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977515.759114473] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977515.959073830] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977515.959383918] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[rviz2-5] [INFO] [1771977516.057824335] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-5] [INFO] [1771977516.063636294] [rviz2]: OpenGl version: 4.5 (GLSL 4.5)
+[wheeltec_six_arm-1] [WARN] [1771977516.208760527] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977516.209079669] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[ros2_control_node-6] [WARN] [1771977516.241310411] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977516.308638679] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977516.408770216] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977516.409205931] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977516.609210769] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977516.610048941] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977516.809595971] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977516.810406162] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977516.811252222] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[six_arm_visualTracker.py-10] [INFO] [1771977517.013869442] [six_arm_visualTracker]: 已处理 30 帧，当前检测颜色: 棕色
+[wheeltec_six_arm-1] [WARN] [1771977517.058994487] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977517.059551052] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[ros2_control_node-6] [WARN] [1771977517.252285104] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977517.259675259] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977517.260431061] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977517.359088363] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977517.509074034] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977517.509707820] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977517.709736657] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977517.710458904] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977517.911563817] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977517.926205721] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977517.926898636] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977518.159484839] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977518.160426582] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[ros2_control_node-6] [WARN] [1771977518.271519456] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977518.409716526] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977518.410168241] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977518.459281738] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977518.659566979] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977518.660319448] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977518.859853905] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977518.860716872] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977519.008847814] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[six_arm_visualTracker.py-10] [INFO] [1771977519.065442057] [six_arm_visualTracker]: 已处理 60 帧，当前检测颜色: 棕色
+[six_arm_visualTracker.py-10] [INFO] [1771977519.085093434] [six_arm_visualTracker]: 颜色: brown, 区域面积: 0
+[wheeltec_six_arm-1] [WARN] [1771977519.109564749] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977519.110114777] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[ros2_control_node-6] [WARN] [1771977519.291392001] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977519.359600273] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977519.360401852] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977519.558713422] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977519.608748626] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977519.609105120] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977519.809098662] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977519.809911204] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977520.011388240] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977520.014005993] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977520.059165760] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977520.259315651] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977520.259836161] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[ros2_control_node-6] [WARN] [1771977520.311343396] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977520.459742797] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977520.461540748] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[six_arm_visualTracker.py-10] [INFO] [1771977520.496985603] [six_arm_visualTracker]: 已处理 90 帧，当前检测颜色: 棕色
+[rviz2-5] [INFO] [1771977520.577184509] [rviz2]: Stereo is NOT SUPPORTED
+[wheeltec_six_arm-1] [WARN] [1771977520.608482358] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977520.709038777] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977520.711955062] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[six_arm_visualTracker.py-10] [INFO] [1771977520.905472101] [six_arm_visualTracker]: 未检测到目标色块
+[wheeltec_six_arm-1] [WARN] [1771977520.909207094] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977520.959001654] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977521.109220913] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977521.111221639] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977521.159116564] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[move_group-4] [INFO] [1771977521.179405430] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Publishing maintained planning scene on 'monitored_planning_scene'
+[move_group-4] [INFO] [1771977521.180012587] [moveit.ros_planning_interface.moveit_cpp]: Listening to 'joint_states' for joint states
+[move_group-4] [INFO] [1771977521.186644347] [moveit_ros.current_state_monitor]: Listening to joint states on topic 'joint_states'
+[move_group-4] [INFO] [1771977521.194792285] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to '/attached_collision_object' for attached collision objects
+[move_group-4] [INFO] [1771977521.194898728] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Starting planning scene monitor
+[move_group-4] [INFO] [1771977521.199629501] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to '/planning_scene'
+[move_group-4] [INFO] [1771977521.199717592] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.
+[move_group-4] [INFO] [1771977521.206237447] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to 'collision_object'
+[move_group-4] [INFO] [1771977521.213668045] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to 'planning_scene_world' for planning scene world geometry
+[move_group-4] [WARN] [1771977521.254592309] [moveit.ros.occupancy_map_monitor.middleware_handle]: Resolution not specified for Octomap. Assuming resolution = 0.1 instead
+[move_group-4] [ERROR] [1771977521.254687122] [moveit.ros.occupancy_map_monitor.middleware_handle]: No 3D sensor plugin(s) defined for octomap updates
+[ros2_control_node-6] [WARN] [1771977521.331637101] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977521.359487915] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977521.360225662] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977521.609247943] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977521.610123410] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977521.659082429] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977521.809510851] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977521.810250265] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977522.009859035] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977522.025433387] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977522.160011407] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977522.259157034] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977522.262053819] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[ros2_control_node-6] [WARN] [1771977522.351528034] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977522.509325278] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977522.510315595] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[rviz2-5] Warning: class_loader.impl: SEVERE WARNING!!! A namespace collision has occurred with plugin factory for class rviz_default_plugins::displays::InteractiveMarkerDisplay. New factory will OVERWRITE existing one. This situation occurs when libraries containing plugins are directly linked against an executable (the one running right now generating this message). Please separate plugins out into their own library or just don't link against the library and use either class_loader::ClassLoader/MultiLibraryClassLoader to open.
+[rviz2-5]          at line 253 in /opt/ros/humble/include/class_loader/class_loader/class_loader_core.hpp
+[six_arm_visualTracker.py-10] [INFO] [1771977522.655462346] [six_arm_visualTracker]: 已处理 120 帧，当前检测颜色: 棕色
+[six_arm_visualTracker.py-10] [INFO] [1771977522.686875471] [six_arm_visualTracker]: 颜色: brown, 区域面积: 0
+[wheeltec_six_arm-1] [WARN] [1771977522.709097083] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977522.709959180] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977522.710439598] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977522.959298030] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977522.959769541] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977523.160150817] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977523.161172578] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977523.258946284] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[ros2_control_node-6] [WARN] [1771977523.351674611] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977523.409201042] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977523.409925901] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977523.609755982] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977523.610597561] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977523.759038683] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977523.859450790] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977523.860280980] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977524.059693809] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977524.060433686] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977524.259780590] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977524.260611206] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977524.308423521] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[ros2_control_node-6] [WARN] [1771977524.381525934] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977524.508843575] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977524.509376251] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[six_arm_visualTracker.py-10] [INFO] [1771977524.558816484] [six_arm_visualTracker]: 已处理 150 帧，当前检测颜色: 棕色
+[wheeltec_six_arm-1] [WARN] [1771977524.758962616] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977524.759654493] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977524.808475199] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977525.009196636] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977525.010118139] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977525.209642448] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977525.210505656] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977525.309181384] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[ros2_control_node-6] [WARN] [1771977525.401526292] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977525.460025503] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977525.461047616] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977525.660317281] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977525.662377599] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977525.858766719] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977525.908944958] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977525.909345970] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[rviz2-5] [ERROR] [1771977525.929042512] [moveit_ros_visualization.motion_planning_frame]: Action server: /recognize_objects not available
+[wheeltec_six_arm-1] [WARN] [1771977526.117870685] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977526.134537537] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[six_arm_visualTracker.py-10] [INFO] [1771977526.289019003] [six_arm_visualTracker]: 已处理 180 帧，当前检测颜色: 棕色
+[six_arm_visualTracker.py-10] [INFO] [1771977526.338043706] [six_arm_visualTracker]: 颜色: brown, 区域面积: 0
+[wheeltec_six_arm-1] [WARN] [1771977526.358824489] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977526.359982452] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977526.366105164] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[ros2_control_node-6] [WARN] [1771977526.421561779] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[rviz2-5] [INFO] [1771977526.423099605] [moveit_ros_visualization.motion_planning_frame]: MoveGroup namespace changed: / -> . Reloading params.
+[wheeltec_six_arm-1] [WARN] [1771977526.563144774] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977526.611144142] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977526.809020200] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977526.812886266] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977526.908440250] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977527.058989855] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977527.060638883] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977527.259438315] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977527.309288430] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977527.408606277] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[ros2_control_node-6] [WARN] [1771977527.422174903] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977527.459774685] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[six_arm_visualTracker.py-10] [INFO] [1771977527.484439348] [six_arm_visualTracker]: 未检测到目标色块
+[wheeltec_six_arm-1] [WARN] [1771977527.509302861] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977527.660589621] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977527.716315563] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977527.869414386] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977527.908821563] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977527.958800917] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977528.109250283] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977528.208585426] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977528.358362230] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[rviz2-5] [INFO] [1771977528.399192847] [moveit_rdf_loader.rdf_loader]: Loaded robot model in 1.46516 seconds
+[rviz2-5] [INFO] [1771977528.399862669] [moveit_robot_model.robot_model]: Loading robot model 'mini_4wd_robot'...
+[rviz2-5] [WARN] [1771977528.399952019] [moveit_robot_model.robot_model]: Skipping virtual joint 'virtual_joint' because its child frame 'armbase_link' does not match the URDF frame 'base_link'
+[rviz2-5] [INFO] [1771977528.399976259] [moveit_robot_model.robot_model]: No root/virtual joint specified in SRDF. Assuming fixed joint
+[wheeltec_six_arm-1] [WARN] [1771977528.409093848] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[ros2_control_node-6] [WARN] [1771977528.441589974] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977528.458586617] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[six_arm_visualTracker.py-10] [INFO] [1771977528.538662007] [six_arm_visualTracker]: 已处理 210 帧，当前检测颜色: 棕色
+[wheeltec_six_arm-1] [WARN] [1771977528.559674824] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977528.609855600] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977528.808876547] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977528.860065399] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977529.008815071] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977529.009802962] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977529.109584672] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977529.258831743] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977529.358968095] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[ros2_control_node-6] [WARN] [1771977529.452812422] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977529.460368611] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977529.508845842] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977529.561237692] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977529.708986807] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977529.810953221] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977529.958648930] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977530.058425232] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977530.059540751] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977530.158966040] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977530.309883029] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977530.359978139] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[ros2_control_node-6] [WARN] [1771977530.461389692] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977530.511494729] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977530.558954698] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977530.560174585] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977530.760846560] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977530.761557326] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977531.009988710] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977531.010834492] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977531.108866046] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977531.259982494] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977531.264635324] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[six_arm_visualTracker.py-10] [INFO] [1771977531.418458190] [six_arm_visualTracker]: 已处理 240 帧，当前检测颜色: 棕色
+[six_arm_visualTracker.py-10] [INFO] [1771977531.435078561] [six_arm_visualTracker]: 颜色: brown, 区域面积: 0
+[ros2_control_node-6] [WARN] [1771977531.481523196] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977531.508732373] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977531.509031627] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977531.658472492] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977531.709315145] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977531.709700028] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977531.958613996] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977531.959003860] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977532.158690352] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977532.159198491] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977532.208456042] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977532.359188552] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977532.360041297] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[ros2_control_node-6] [WARN] [1771977532.491734531] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977532.609799326] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977532.610828623] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977532.708796030] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977532.860357359] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977532.861525118] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977533.109993464] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977533.111026669] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[six_arm_visualTracker.py-10] [INFO] [1771977533.115372485] [six_arm_visualTracker]: 已处理 270 帧，当前检测颜色: 棕色
+[wheeltec_six_arm-1] [WARN] [1771977533.208941576] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977533.359586217] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977533.360403685] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[ros2_control_node-6] [WARN] [1771977533.491768666] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977533.609515039] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977533.610331952] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977533.758323896] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977533.859098997] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977533.859715931] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[rviz2-5] [WARN] [1771977533.925017233] [kdl_parser]: The root link base_link has an inertia specified in the URDF, but KDL does not support a root link with an inertia.  As a workaround, you can add an extra dummy link to your URDF.
+[wheeltec_six_arm-1] [WARN] [1771977534.108926950] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977534.109567476] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977534.258368740] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977534.309325985] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977534.310166323] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977534.510102329] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977534.510984332] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[ros2_control_node-6] [WARN] [1771977534.515222299] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977534.758657785] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977534.759532326] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977534.808572232] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977534.959730123] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977534.960495074] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[six_arm_visualTracker.py-10] [INFO] [1771977534.978516977] [six_arm_visualTracker]: 已处理 300 帧，当前检测颜色: 棕色
+[six_arm_visualTracker.py-10] [INFO] [1771977535.004647783] [six_arm_visualTracker]: 颜色: brown, 区域面积: 0
+[six_arm_visualTracker.py-10] [INFO] [1771977535.030212710] [six_arm_visualTracker]: 未检测到目标色块
+[wheeltec_six_arm-1] [WARN] [1771977535.160419061] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977535.161387934] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977535.308981181] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977535.409662561] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977535.410555657] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[ros2_control_node-6] [WARN] [1771977535.521448571] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977535.659361702] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977535.660063060] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977535.809103950] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977535.909658629] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977535.910708796] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977536.158753946] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977536.159093255] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[six_arm_visualTracker.py-10] [INFO] [1771977536.186865774] [six_arm_visualTracker]: 已处理 330 帧，当前检测颜色: 棕色
+[wheeltec_six_arm-1] [WARN] [1771977536.309327903] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977536.359370440] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977536.360053540] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[ros2_control_node-6] [WARN] [1771977536.541524298] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977536.609380872] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977536.610395689] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977536.809506856] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977536.858805091] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977536.860979129] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977537.058937242] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977537.110066465] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977537.308653234] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977537.359114820] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977537.409383873] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977537.509419041] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[ros2_control_node-6] [WARN] [1771977537.551560673] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977537.559942756] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977537.758741558] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977537.808449249] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977537.967044666] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977537.967811412] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977538.008607492] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977538.208230652] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977538.258852568] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[six_arm_visualTracker.py-10] [INFO] [1771977538.275959432] [six_arm_visualTracker]: 已处理 360 帧，当前检测颜色: 棕色
+[six_arm_visualTracker.py-10] [INFO] [1771977538.287653663] [six_arm_visualTracker]: 颜色: brown, 区域面积: 0
+[wheeltec_six_arm-1] [WARN] [1771977538.408881275] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977538.508661300] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977538.509279141] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[ros2_control_node-6] [WARN] [1771977538.571390145] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977538.609178201] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977538.758811655] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977538.858473978] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977538.959338799] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977539.058056341] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977539.059087583] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977539.159474172] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977539.259232364] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[six_arm_visualTracker.py-10] [INFO] [1771977539.406563560] [six_arm_visualTracker]: 已处理 390 帧，当前检测颜色: 棕色
+[wheeltec_six_arm-1] [WARN] [1771977539.409120925] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977539.509005855] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977539.558559956] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[ros2_control_node-6] [WARN] [1771977539.571518722] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977539.609352277] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977539.709165449] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977539.809739109] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[six_arm_visualTracker.py-10] [INFO] [1771977539.850376636] [six_arm_visualTracker]: 未检测到目标色块
+[wheeltec_six_arm-1] [WARN] [1771977539.959079475] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977540.058585653] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977540.061259478] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977540.208966002] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977540.311782272] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977540.458446683] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977540.559047453] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[ros2_control_node-6] [WARN] [1771977540.591588152] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977540.608022342] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977540.658648647] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977540.809547247] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[six_arm_visualTracker.py-10] [INFO] [1771977540.822020095] [six_arm_visualTracker]: 已处理 420 帧，当前检测颜色: 棕色
+[six_arm_visualTracker.py-10] [INFO] [1771977540.833491163] [six_arm_visualTracker]: 颜色: brown, 区域面积: 0
+[wheeltec_six_arm-1] [WARN] [1771977540.858967758] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977541.059210407] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977541.108305590] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977541.108813674] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977541.308442518] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977541.358247948] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977541.508962903] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977541.558442635] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[ros2_control_node-6] [WARN] [1771977541.601613861] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977541.608938295] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977541.709645841] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977541.759543677] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977541.909904452] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977542.009321539] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977542.158480223] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977542.159351431] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977542.258893181] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[six_arm_visualTracker.py-10] [INFO] [1771977542.289036476] [six_arm_visualTracker]: 已处理 450 帧，当前检测颜色: 棕色
+[wheeltec_six_arm-1] [WARN] [1771977542.359598487] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977542.459156552] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977542.569088056] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[ros2_control_node-6] [WARN] [1771977542.601622292] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977542.708462699] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977542.709075282] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977542.808688735] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977542.910665871] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977543.010103827] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977543.158845074] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977543.257963147] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977543.260224664] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977543.409689881] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977543.510408667] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[ros2_control_node-6] [WARN] [1771977543.631278452] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977543.658804438] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977543.758292542] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977543.758868403] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977543.908631651] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[six_arm_visualTracker.py-10] [INFO] [1771977543.959066645] [six_arm_visualTracker]: 已处理 480 帧，当前检测颜色: 棕色
+[six_arm_visualTracker.py-10] [INFO] [1771977543.971865895] [six_arm_visualTracker]: 颜色: brown, 区域面积: 0
+[wheeltec_six_arm-1] [WARN] [1771977544.009139960] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977544.158634527] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977544.258452644] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977544.262456744] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977544.359021563] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977544.509103268] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977544.608658926] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[ros2_control_node-6] [WARN] [1771977544.641278291] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977544.758784002] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977544.808063367] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977544.810653398] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977545.008670917] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977545.058339405] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[six_arm_visualTracker.py-10] [INFO] [1771977545.120065119] [six_arm_visualTracker]: 未检测到目标色块
+[wheeltec_six_arm-1] [WARN] [1771977545.208706162] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977545.258383835] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977545.357924605] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977545.458439950] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977545.508184659] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[six_arm_visualTracker.py-10] [INFO] [1771977545.530771672] [six_arm_visualTracker]: 已处理 510 帧，当前检测颜色: 棕色
+[ros2_control_node-6] [WARN] [1771977545.661385943] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977545.709051094] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977545.709507753] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977545.857965597] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977545.958190096] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977545.958537016] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977546.158790368] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977546.161313697] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977546.408496620] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977546.409264533] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977546.409785173] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977546.658243704] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977546.658929471] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[ros2_control_node-6] [WARN] [1771977546.661610352] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[six_arm_visualTracker.py-10] [INFO] [1771977546.665051739] [six_arm_visualTracker]: 已处理 540 帧，当前检测颜色: 棕色
+[six_arm_visualTracker.py-10] [INFO] [1771977546.675297180] [six_arm_visualTracker]: 颜色: brown, 区域面积: 0
+[wheeltec_six_arm-1] [WARN] [1771977546.858503668] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977546.859057177] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977546.958158120] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[rviz2-5] [INFO] [1771977547.029778188] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Starting planning scene monitor
+[rviz2-5] [INFO] [1771977547.045901901] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to '/monitored_planning_scene'
+[wheeltec_six_arm-1] [WARN] [1771977547.110094388] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977547.110714859] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977547.358445495] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977547.359179316] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977547.508020728] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977547.608943937] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977547.609571390] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[ros2_control_node-6] [WARN] [1771977547.681354658] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977547.858237548] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977547.858766391] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977548.057937909] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977548.059044780] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977548.066538618] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977548.308773401] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977548.312068606] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977548.558050123] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977548.558559855] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977548.558986182] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[ros2_control_node-6] [WARN] [1771977548.701350831] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[six_arm_visualTracker.py-10] [INFO] [1771977548.745115269] [six_arm_visualTracker]: 已处理 570 帧，当前检测颜色: 棕色
+[wheeltec_six_arm-1] [WARN] [1771977548.758951354] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977548.759443531] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977549.008687290] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977549.009023451] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977549.107733493] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977549.209205434] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977549.258067417] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977549.459123293] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977549.459459695] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977549.607774949] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[ros2_control_node-6] [WARN] [1771977549.701775459] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977549.708309535] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977549.708744083] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977549.908568239] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977549.908898123] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977550.108475153] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977550.109205141] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977550.109792575] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977550.358758024] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977550.359584048] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977550.561608926] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977550.569809642] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977550.612342008] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[ros2_control_node-6] [WARN] [1771977550.702569321] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977550.809076382] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977550.809883331] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977551.009526564] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977551.016586132] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977551.158454049] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977551.259641994] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977551.260885307] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977551.508850958] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977551.509636945] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[six_arm_visualTracker.py-10] [INFO] [1771977551.545398535] [six_arm_visualTracker]: 已处理 600 帧，当前检测颜色: 棕色
+[six_arm_visualTracker.py-10] [INFO] [1771977551.566420185] [six_arm_visualTracker]: 颜色: brown, 区域面积: 0
+[six_arm_visualTracker.py-10] [INFO] [1771977551.579128658] [six_arm_visualTracker]: 未检测到目标色块
+[wheeltec_six_arm-1] [WARN] [1771977551.708162974] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[ros2_control_node-6] [WARN] [1771977551.711301625] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977551.712534420] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977551.758572394] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977551.958614361] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977551.959066724] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977552.208237522] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977552.208661737] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977552.257796549] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977552.459348694] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977552.460166477] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977552.708786543] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977552.709381255] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[ros2_control_node-6] [WARN] [1771977552.711339186] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977552.807972059] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977552.909106339] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977552.909872530] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[six_arm_visualTracker.py-10] [INFO] [1771977552.955633286] [six_arm_visualTracker]: 已处理 630 帧，当前检测颜色: 棕色
+[wheeltec_six_arm-1] [WARN] [1771977553.158106232] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977553.158497170] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977553.308229566] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977553.358528100] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977553.359374234] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977553.609054578] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977553.609429794] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[ros2_control_node-6] [WARN] [1771977553.711645130] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977553.808794124] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977553.809531260] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977553.810406949] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977554.060053943] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977554.065840680] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977554.308330737] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977554.313673555] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977554.357725674] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977554.508441536] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977554.558150931] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[ros2_control_node-6] [WARN] [1771977554.721395918] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977554.758482726] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977554.759112253] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[six_arm_visualTracker.py-10] [INFO] [1771977554.782511697] [six_arm_visualTracker]: 已处理 660 帧，当前检测颜色: 棕色
+[six_arm_visualTracker.py-10] [INFO] [1771977554.801156072] [six_arm_visualTracker]: 颜色: brown, 区域面积: 0
+[wheeltec_six_arm-1] [WARN] [1771977554.857809981] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977554.960774267] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977554.961487477] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977555.208406016] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977555.209369907] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977555.358022433] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977555.458599519] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977555.458957217] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977555.707837852] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977555.708187735] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[ros2_control_node-6] [WARN] [1771977555.721565346] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977555.858022556] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977555.908266109] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977555.908563234] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[six_arm_visualTracker.py-10] [INFO] [1771977556.095562307] [six_arm_visualTracker]: 已处理 690 帧，当前检测颜色: 棕色
+[wheeltec_six_arm-1] [WARN] [1771977556.108500906] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977556.109088989] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[rviz2-5] [INFO] [1771977556.181822334] [interactive_marker_display_187650537707216]: Connected on namespace: /rviz_moveit_motion_planning_display/robot_interaction_interactive_marker_topic
+[wheeltec_six_arm-1] [WARN] [1771977556.357979476] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977556.358285842] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[rviz2-5] [WARN] [1771977556.370732116] [kdl_parser]: The root link base_link has an inertia specified in the URDF, but KDL does not support a root link with an inertia.  As a workaround, you can add an extra dummy link to your URDF.
+[wheeltec_six_arm-1] [WARN] [1771977556.407799036] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[move_group-4] [WARN] [1771977556.535782351] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: It is likely there are too many vertices in collision geometry
+[wheeltec_six_arm-1] [WARN] [1771977556.558186626] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977556.558730728] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[six_arm_visualTracker.py-10] [INFO] [1771977556.660896472] [six_arm_visualTracker]: 未检测到目标色块
+[ros2_control_node-6] [WARN] [1771977556.731399299] [arm_controller]: Subscription to deprecated ~/state topic. Use ~/controller_state instead.
+[wheeltec_six_arm-1] [WARN] [1771977556.808369536] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977556.808928916] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977556.908583665] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977557.008530835] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977557.009160880] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977557.208711744] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977557.209249346] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+[wheeltec_six_arm-1] [WARN] [1771977557.457757358] [wheeltec_six_arm]: [joint_states备选] 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000 
+[wheeltec_six_arm-1] [WARN] [1771977557.458308293] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977557.458718472] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+^C[INFO] [1771977557.650124712] [auto_switch_manager]: 收到Ctrl+C，正在关闭...
+Failed to publish log message to rosout: publisher's context is invalid, at ./src/rcl/publisher.c:389
+[INFO] [1771977557.659568388] [auto_switch_manager]: 正在清理资源...
+Failed to publish log message to rosout: publisher's context is invalid, at ./src/rcl/publisher.c:389
+[INFO] [1771977557.679451002] [auto_switch_manager]: 正在停止当前模式: arm
+Failed to publish log message to rosout: publisher's context is invalid, at ./src/rcl/publisher.c:389
+[INFO] [1771977557.694313218] [auto_switch_manager]: 发送SIGINT信号给进程组...
+Failed to publish log message to rosout: publisher's context is invalid, at ./src/rcl/publisher.c:389[wheeltec_six_arm-1] [WARN] [1771977557.708625479] [wheeltec_six_arm]: 发送关节位置到STM32: J1=-0.000 J2=-0.000 J3=0.000 J4=-0.000 J5=-0.000 J6=0.000(保持) 
+[wheeltec_six_arm-1] [WARN] [1771977557.709088490] [wheeltec_six_arm]: 发送手爪位置: 0.000 rad (0)
+
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[rviz2-5] [INFO] [1771977557.723163423] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[rviz2-5] [INFO] [1771977557.724070389] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Failed to call service get_planning_scene, have you launched move_group or called psm.providePlanningSceneService()?
+[rviz2-5] [INFO] [1771977557.724415309] [moveit_ros_visualization.motion_planning_frame]: group arm
+[rviz2-5] [INFO] [1771977557.724460160] [moveit_ros_visualization.motion_planning_frame]: Constructing new MoveGroup connection for group 'arm' in namespace ''
+[rviz2-5] 
+[rviz2-5] >>> [rcutils|error_handling.c:108] rcutils_set_error_state()
+[rviz2-5] This error state is being overwritten:
+[rviz2-5] 
+[rviz2-5]   'rcl node's context is invalid, at ./src/rcl/node.c:428'
+[rviz2-5] 
+[rviz2-5] with this new error message:
+[rviz2-5] 
+[rviz2-5]   'the given context is not valid, either rcl_init() was not called or rcl_shutdown() was called., at ./src/rcl/guard_condition.c:67'
+[rviz2-5] 
+[rviz2-5] rcutils_reset_error() should be called after error handling to avoid this.
+[rviz2-5] <<<
+[INFO] [six_arm_car_location_color-11]: process has finished cleanly [pid 14082]
+[wheeltec_six_arm-1] [INFO] [1771977557.723153441] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [static_transform_publisher-2]: process has finished cleanly [pid 14053]
+[ros2_control_node-6] [INFO] [1771977557.723613285] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[ros2_control_node-6] [INFO] [1771977557.723917040] [controller_manager]: Shutdown request received....
+[ros2_control_node-6] [INFO] [1771977557.724143073] [controller_manager]: Shutting down all controllers in the controller manager.
+[ros2_control_node-6] [INFO] [1771977557.724302126] [controller_manager]: Deactivating controller 'joint_state_broadcaster'
+[ros2_control_node-6] [INFO] [1771977557.724451772] [controller_manager]: Shutting down controller 'joint_state_broadcaster'
+[ros2_control_node-6] [INFO] [1771977557.724615639] [controller_manager]: Deactivating controller 'arm_controller'
+[ros2_control_node-6] [INFO] [1771977557.724779377] [controller_manager]: Shutting down controller 'arm_controller'
+[ros2_control_node-6] [INFO] [1771977557.724883394] [controller_manager]: Deactivating controller 'hand_controller'
+[ros2_control_node-6] [INFO] [1771977557.724960948] [controller_manager]: Shutting down controller 'hand_controller'
+[ros2_control_node-6] [INFO] [1771977557.725074520] [resource_manager]: 'deactivate' hardware 'FakeSystem' 
+[ros2_control_node-6] [INFO] [1771977557.725168093] [resource_manager]: Successful 'deactivate' of hardware 'FakeSystem'
+[ros2_control_node-6] [INFO] [1771977557.725192296] [resource_manager]: 'shutdown' hardware 'FakeSystem' 
+[ros2_control_node-6] [INFO] [1771977557.725217111] [resource_manager]: Successful 'shutdown' of hardware 'FakeSystem'
+[ros2_control_node-6] [INFO] [1771977557.725238407] [controller_manager]: Shutting down the controller manager.
+[six_arm_car_location_color-11] [INFO] [1771977557.724251016] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [robot_state_publisher-3]: process has finished cleanly [pid 14055]
+[six_arm_pick_and_put-12] [INFO] [1771977557.726814936] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[six_arm_pick_and_put-12] [ERROR] [1771977557.728802032] [arm_pick_and_put.rclcpp_action]: Error in destruction of rcl action client handle: action client implementation is invalid, at ./src/rcl_action/action_client.c:472
+[six_arm_pick_and_put-12] terminate called without an active exception
+[usb_cam_node_exe-13] [INFO] [1771977557.727230151] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[usb_cam_node_exe-13] [WARN] [1771977557.732444342] [usb_cam_node]: Shutting down
+[static_transform_publisher-2] [INFO] [1771977557.727906714] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[robot_state_publisher-3] [INFO] [1771977557.744873895] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[six_arm_visualTracker.py-10] [INFO] [1771977557.749963014] [six_arm_visualTracker]: KeyboardInterrupt received, shutting down...
+[six_arm_visualTracker.py-10] Failed to publish log message to rosout: publisher's context is invalid, at ./src/rcl/publisher.c:389
+[rviz2-5] [ERROR] [1771977557.764570826] [moveit_ros_visualization.motion_planning_frame]: failed to create guard condition: the given context is not valid, either rcl_init() was not called or rcl_shutdown() was called., at ./src/rcl/guard_condition.c:67
+[rviz2-5] [INFO] [1771977557.765748121] [moveit_ros_visualization.motion_planning_frame]: group arm
+[rviz2-5] [INFO] [1771977557.765811491] [moveit_ros_visualization.motion_planning_frame]: Constructing new MoveGroup connection for group 'arm' in namespace ''
+[rviz2-5] [ERROR] [1771977557.766016765] [moveit_ros_visualization.motion_planning_frame]: failed to create guard condition: the given context is not valid, either rcl_init() was not called or rcl_shutdown() was called., at ./src/rcl/guard_condition.c:67
+[six_arm_car_location_color-11] [INFO] [1771977557.788063305] [car_location_color]: car_location_color_node_close
+[wheeltec_six_arm-1] [INFO] [1771977557.803324996] [wheeltec_six_arm]: Sending shutdown velocity command.
+[wheeltec_six_arm-1] [INFO] [1771977557.810604967] [wheeltec_six_arm]: Shutting down serial port.
+[move_group-4] [INFO] [1771977557.871332197] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[ERROR] [six_arm_pick_and_put-12]: process has died [pid 14092, exit code -6, cmd '/home/ros/ROS_ws/install/wheeltec_arm_pick/lib/wheeltec_arm_pick/six_arm_pick_and_put --ros-args -r __node:=arm_pick_and_put'].
+[INFO] [wheeltec_six_arm-1]: process has finished cleanly [pid 14051]
+[ERROR] [usb_cam_node_exe-13]: process has died [pid 14100, exit code -11, cmd '/home/ros/ROS_ws/install/usb_cam/lib/usb_cam/usb_cam_node_exe --ros-args -r __node:=usb_cam_node --params-file /tmp/launch_params_khnlb0r8 -r /image_raw:=/image_raw'].
+[INFO] [six_arm_visualTracker.py-10]: process has finished cleanly [pid 14070]
+[INFO] [ros2_control_node-6]: process has finished cleanly [pid 14061]
+[move_group-4] [INFO] [1771977561.495004704] [moveit.ros_planning_interface.moveit_cpp]: Loading planning pipeline 'pilz_industrial_motion_planner'
+[move_group-4] [INFO] [1771977561.578811068] [moveit.pilz_industrial_motion_planner.joint_limits_aggregator]: Reading limits from namespace robot_description_planning
+[move_group-4] [INFO] [1771977561.597742513] [moveit.pilz_industrial_motion_planner]: Available plugins: pilz_industrial_motion_planner/PlanningContextLoaderCIRC pilz_industrial_motion_planner/PlanningContextLoaderLIN pilz_industrial_motion_planner/PlanningContextLoaderPTP 
+[move_group-4] [INFO] [1771977561.597797419] [moveit.pilz_industrial_motion_planner]: About to load: pilz_industrial_motion_planner/PlanningContextLoaderCIRC
+[move_group-4] [INFO] [1771977561.617809030] [moveit.pilz_industrial_motion_planner]: Registered Algorithm [CIRC]
+[move_group-4] [INFO] [1771977561.617922621] [moveit.pilz_industrial_motion_planner]: About to load: pilz_industrial_motion_planner/PlanningContextLoaderLIN
+[move_group-4] [INFO] [1771977561.627509758] [moveit.pilz_industrial_motion_planner]: Registered Algorithm [LIN]
+[move_group-4] [INFO] [1771977561.627579294] [moveit.pilz_industrial_motion_planner]: About to load: pilz_industrial_motion_planner/PlanningContextLoaderPTP
+[move_group-4] [INFO] [1771977561.638814273] [moveit.pilz_industrial_motion_planner]: Registered Algorithm [PTP]
+[move_group-4] [INFO] [1771977561.638890587] [moveit.ros_planning.planning_pipeline]: Using planning interface 'Pilz Industrial Motion Planner'
+[move_group-4] terminate called after throwing an instance of 'rclcpp::exceptions::RCLError'
+[move_group-4]   what():  could not create publisher: rcl node's context is invalid, at ./src/rcl/node.c:428
+[move_group-4] Stack trace (most recent call last):
+[move_group-4] #21   Object "/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1", at 0xffffffffffffffff, in 
+[move_group-4] #20   Object "/opt/ros/humble/lib/moveit_ros_move_group/move_group", at 0xaaaacbe5f46f, in 
+[move_group-4] #19   Source "../csu/libc-start.c", line 392, in __libc_start_main_impl [0xffffb87674d7]
+[move_group-4] #18   Source "../sysdeps/nptl/libc_start_call_main.h", line 58, in __aarch64_ldadd4_acq [0xffffb87673ff]
+[move_group-4] #17   Object "/opt/ros/humble/lib/moveit_ros_move_group/move_group", at 0xaaaacbe5e227, in 
+[move_group-4] #16   Object "/opt/ros/humble/lib/libmoveit_cpp.so.2.5.9", at 0xffffb912919b, in moveit_cpp::MoveItCpp::MoveItCpp(std::shared_ptr<rclcpp::Node> const&, moveit_cpp::MoveItCpp::Options const&)
+[move_group-4] #15   Object "/opt/ros/humble/lib/libmoveit_cpp.so.2.5.9", at 0xffffb9125a97, in moveit_cpp::MoveItCpp::loadPlanningPipelines(moveit_cpp::MoveItCpp::PlanningPipelineOptions const&)
+[move_group-4] #14   Object "/opt/ros/humble/lib/libmoveit_planning_pipeline.so.2.5.9", at 0xffffb85f1547, in planning_pipeline::PlanningPipeline::PlanningPipeline(std::shared_ptr<moveit::core::RobotModel const> const&, std::shared_ptr<rclcpp::Node> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+[move_group-4] #13   Object "/opt/ros/humble/lib/libmoveit_planning_pipeline.so.2.5.9", at 0xffffb85f7aa3, in planning_pipeline::PlanningPipeline::configure()
+[move_group-4] #12   Object "/opt/ros/humble/lib/libmoveit_planning_pipeline.so.2.5.9", at 0xffffb85f5e37, in planning_pipeline::PlanningPipeline::displayComputedMotionPlans(bool)
+[move_group-4] #11   Object "/opt/ros/humble/lib/librclcpp.so", at 0xffffb8d6b013, in rclcpp::node_interfaces::NodeTopics::create_publisher(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, rclcpp::PublisherFactory const&, rclcpp::QoS const&)
+[move_group-4] #10   Object "/opt/ros/humble/lib/libmoveit_planning_pipeline.so.2.5.9", at 0xffffb860ea1f, in std::_Function_handler<std::shared_ptr<rclcpp::PublisherBase> (rclcpp::node_interfaces::NodeBaseInterface*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, rclcpp::QoS const&), rclcpp::create_publisher_factory<moveit_msgs::msg::DisplayTrajectory_<std::allocator<void> >, std::allocator<void>, rclcpp::Publisher<moveit_msgs::msg::DisplayTrajectory_<std::allocator<void> >, std::allocator<void> > >(rclcpp::PublisherOptionsWithAllocator<std::allocator<void> > const&)::{lambda(rclcpp::node_interfaces::NodeBaseInterface*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, rclcpp::QoS const&)#1}>::_M_invoke(std::_Any_data const&, rclcpp::node_interfaces::NodeBaseInterface*&&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, rclcpp::QoS const&)
+[move_group-4] #9    Object "/opt/ros/humble/lib/libmoveit_planning_pipeline.so.2.5.9", at 0xffffb861f757, in 
+[move_group-4] #8    Object "/opt/ros/humble/lib/librclcpp.so", at 0xffffb8dadfff, in rclcpp::PublisherBase::PublisherBase(rclcpp::node_interfaces::NodeBaseInterface*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, rosidl_message_type_support_t const&, rcl_publisher_options_s const&)
+[move_group-4] #7    Object "/opt/ros/humble/lib/librclcpp.so", at 0xffffb8d33497, in rclcpp::exceptions::throw_from_rcl_error(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, rcutils_error_state_s const*, void (*)())
+[move_group-4] #6    Object "/usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30", at 0xffffb89c2b37, in std::rethrow_exception(std::__exception_ptr::exception_ptr)
+[move_group-4] #5    Object "/usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30", at 0xffffb89c2baf, in std::terminate()
+[move_group-4] #4    Object "/usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30", at 0xffffb89c2b4b, in 
+[move_group-4] #3    Object "/usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30", at 0xffffb89c53cf, in __gnu_cxx::__verbose_terminate_handler()
+[move_group-4] #2    Source "./stdlib/abort.c", line 79, in abort [0xffffb8767133]
+[move_group-4] #1    Source "../sysdeps/posix/raise.c", line 26, in raise [0xffffb877a83b]
+[move_group-4] #0    Source "./nptl/pthread_kill.c", line 44, in __pthread_kill_implementation [0xffffb87c2008]
+[move_group-4] Aborted (Signal sent by tkill() 14057 1000)
+[ERROR] [rviz2-5]: process has died [pid 14059, exit code -11, cmd '/opt/ros/humble/lib/rviz2/rviz2 -d /home/ros/ROS_ws/install/mini_4wd_six_arm_moveit_config/share/mini_4wd_six_arm_moveit_config/config/moveit.rviz --ros-args --params-file /tmp/launch_params_0pc899by --params-file /tmp/launch_params_yylsbmlq --params-file /tmp/launch_params_zjg3k_2j'].
+[ERROR] [move_group-4]: process[move_group-4] failed to terminate '5' seconds after receiving 'SIGINT', escalating to 'SIGTERM'
+[INFO] [move_group-4]: sending signal 'SIGTERM' to process[move_group-4]
+[ERROR] [move_group-4]: process has died [pid 14057, exit code -6, cmd '/opt/ros/humble/lib/moveit_ros_move_group/move_group --ros-args --params-file /tmp/launch_params_reg8xb2j --params-file /tmp/launch_params_fi3fnxui'].
+[INFO] [1771977563.747999448] [auto_switch_manager]: 进程已正常退出
+Failed to publish log message to rosout: publisher's context is invalid, at ./src/rcl/publisher.c:389
+[INFO] [1771977563.750093562] [auto_switch_manager]: 等待5秒释放资源（串口、内存等）...
+Failed to publish log message to rosout: publisher's context is invalid, at ./src/rcl/publisher.c:389
+[INFO] [1771977568.761074831] [auto_switch_manager]: 资源释放完成
+Failed to publish log message to rosout: publisher's context is invalid, at ./src/rcl/publisher.c:389
+[INFO] [1771977568.893114411] [auto_switch_manager]: 自动切换管理器已关闭
+ros@ubuntu:~/ROS_ws$ 
+
+
+
+
+
+
+
+ros@ubuntu:~/ROS_ws$ ros2 topic pub /arm_grab std_msgs/msg/String "data: 'place'" --once
+Waiting for at least 1 matching subscription(s)...
+Waiting for at least 1 matching subscription(s)...
+Waiting for at least 1 matching subscription(s)...
+Waiting for at least 1 matching subscription(s)...
+Waiting for at least 1 matching subscription(s)...
+Waiting for at least 1 matching subscription(s)...
+Waiting for at least 1 matching subscription(s)...
+Waiting for at least 1 matching subscription(s)...
+Waiting for at least 1 matching subscription(s)...
+Waiting for at least 1 matching subscription(s)...
+Waiting for at least 1 matching subscription(s)...
+Waiting for at least 1 matching subscription(s)...
+Waiting for at least 1 matching subscription(s)...
+Waiting for at least 1 matching subscription(s)...
+Waiting for at least 1 matching subscription(s)...
+Waiting for at least 1 matching subscription(s)...
+Waiting for at least 1 matching subscription(s)...
+Waiting for at least 1 matching subscription(s)...
+Waiting for at least 1 matching subscription(s)...
+Waiting for at least 1 matching subscription(s)...
+Waiting for at least 1 matching subscription(s)...
+Waiting for at least 1 matching subscription(s)...
+Waiting for at least 1 matching subscription(s)...
+Waiting for at least 1 matching subscription(s)...
+Waiting for at least 1 matching subscription(s)...
+Waiting for at least 1 matching subscription(s)...
+Waiting for at least 1 matching subscription(s)...
+Waiting for at least 1 matching subscription(s)...
+ros@ubuntu:~/ROS_ws$ ros2 topic pub /switch_mode std_msgs/msg/String "data: 'place'" --oncece
+publisher: beginning loop
+publishing #1: std_msgs.msg.String(data='place')
+
+ros@ubuntu:~/ROS_ws$ ros2 topic pub /arm_grab std_msgs/msg/String "data: 'place'" --once
+publisher: beginning loop
+publishing #1: std_msgs.msg.String(data='place')
+
+ros@ubuntu:~/ROS_ws$ ros2 topic pub /arm_grab std_msgs/msg/String "data: 'place'" --once
+publisher: beginning loop
+publishing #1: std_msgs.msg.String(data='place')
+
+ros@ubuntu:~/ROS_ws$ 
